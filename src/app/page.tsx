@@ -1,101 +1,86 @@
+"use client";
+
+import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import ShopexOffer from "@/components/Shopex";
+import ProductFeature from "@/components/UniqueFeature";
+import FeaturedProducts from "@/components/FeatProduct";
+import Products from "@/components/LatestProd";
+import Latestblog from "@/components/LatestBlog";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <>
+      <section className="body-font bg-[#F2F0FF]">
+        <div className="container mx-auto flex px-4 py-4 md:flex-row flex-col items-center">
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+     {/* Left Section */}
+        <div className="w-full lg:max-w-lg lg:w-full md:w-1/2 flex flex-col items-center md:items-start mb-8 md:mb-0">
+            <Image 
+              src="/hero2.png" 
+              alt="Hekto Logo" 
+              width={260}
+              height={280} 
+              className="mt-[-127px] ml-3 mr-[-60px] hidden sm:block" // Hidden on mobile
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <div className="mt-10 ml-10 md:ml-0">
+              <Image 
+                src="/dot.png" 
+                alt="Decorative Dot" 
+                width={12} 
+                height={10} 
+                className="mt-20 ml-20"
+              />
+            </div>
+          </div>
+
+      {/* Right Section */}
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left mt-6 md:mt-0 md:ml-[-280px]">
+            <h3 className="text-[#FB2E86] font-bold text-1xl md:text-2xl">
+              Best Furniture For Your Castle...
+            </h3>
+            <h1 className="title-font md:text-4xl text-4xl mb-4 font-bold">
+              New Furniture Collection Trends in 2020
+            </h1>
+            <p className="mb-8 leading-relaxed text-[#6b709b] text-sm md:text-base">
+              Lorem ipsum dolor, sit amet adipisicing elit. Perferendis  labore quaerat earum nisi.
+            </p>
+
+            <div className="flex justify-center mt-4">
+              <Button className="text-white bg-pink-500 px-9 py-6 font-bold hover:bg-pink-600 transition-all duration-300">
+                Shop Now
+              </Button>
+            </div>
+          </div>
+
+      {/* Hero Image */}
+          <div className="lg:max-w-lg lg:w-full md:w-1/2 w-5/6 mt-6 md:mt-0">
+            <Image 
+              src="/hero1.png" 
+              alt="Hekto Product" 
+              width={500} 
+              height={600} 
+              className="rounded-lg mr-[80px]"
+            />
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <Image 
+          src="/dotee.png" 
+          alt="Decorative Dot" 
+          width={60} 
+          height={60} 
+          className="mx-auto pb-10" 
+        />
+      </section>
+
+    {/* Sections */}
+      <div>
+       <FeaturedProducts />
+        <Products />
+        <ShopexOffer />
+        <ProductFeature /> 
+        <Latestblog />
+      </div>
+    </>
   );
 }

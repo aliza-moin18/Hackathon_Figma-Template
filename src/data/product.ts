@@ -183,3 +183,4 @@ export const products: Product[] = [
     isAvailable: true,
     ratingComments: ["Great for modern spaces.", "Very comfortable to sit on."]
   }
+];

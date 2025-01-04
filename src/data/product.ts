@@ -183,8 +183,3 @@ export const products: Product[] = [
     isAvailable: true,
     ratingComments: ["Great for modern spaces.", "Very comfortable to sit on."]
   }
-<<<<<<< HEAD:src/data/product.ts
-];
-=======
-];
->>>>>>> adf174133ca49775bcf08ac61e2d10875eb2df52:src/app/productData/page.tsx

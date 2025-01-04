@@ -3,7 +3,15 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { FaRegHeart } from 'react-icons/fa';
 import { FiShoppingCart } from 'react-icons/fi';
 
-function ProductCard({ image, title, price, discountPrice }) {
+// Define types for the props of ProductCard component
+interface ProductCardProps {
+  image: string;
+  title: string;
+  price: string;
+  discountPrice: string;
+}
+
+function ProductCard({ image, title, price, discountPrice }: ProductCardProps) {
   return (
     <div className="group relative bg-white rounded-lg shadow-md overflow-hidden p-5 transition-transform transform group-hover:scale-105">
       
@@ -42,11 +50,11 @@ function ProductCard({ image, title, price, discountPrice }) {
         {/* Title, Price and Discount Price in Same Row */}
         <div className="flex justify-between items-center mb-2">
           <h3 className="text-md font-semibold text-blue-900 truncate w-3/5">{title}</h3>
-            <p className="text-[18px] font-semibold text-black">{price}</p>
-            <p className="text-[18px] font-bold text-red-600 line-through">{discountPrice}</p>
-          </div>
+          <p className="text-[18px] font-semibold text-black">{price}</p>
+          <p className="text-[18px] font-bold text-red-600 line-through">{discountPrice}</p>
         </div>
       </div>
+    </div>
   );
 }
 

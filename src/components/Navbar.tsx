@@ -53,7 +53,7 @@ const Navbar = () => {
         <div className="md:hidden bg-white p-4 space-y-2">
           <Link href="/" className="block text-gray-500 hover:text-[#FB2E86]">Home</Link>
           <Link href="/about" className="block text-gray-500 hover:text-[#FB2E86]">About</Link>
-          <Link href="/products" className="block text-gray-500 hover:text-[#FB2E86]">Products</Link>
+          <Link href="/productsPage" className="block text-gray-500 hover:text-[#FB2E86]">Products</Link>
           <Link href="/blog" className="block text-gray-500 hover:text-[#FB2E86]">Blog</Link>
           <Link href="/shop" className="block text-gray-500 hover:text-[#FB2E86]">Shop</Link>
           <Link href="/contact" className="block text-gray-500 hover:text-[#FB2E86]">Contact</Link>
